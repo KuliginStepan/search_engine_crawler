@@ -24,6 +24,7 @@ package:
 deploy-test:
   stage: deploy
   image: alpine/helm:3.4.2
+  when: manual
   environment:
     name: test
     kubernetes:
@@ -34,6 +35,7 @@ deploy-test:
 deploy-prod:
   stage: deploy
   image: alpine/helm:3.4.2
+  when: manual
   environment:
     name: production
     kubernetes:
