@@ -20,8 +20,7 @@ HISTOGRAM_PAGE_PARSE_TIME = prometheus_client.Histogram('crawler_page_parse_time
 def connect_db():
     try:
         db = MongoClient(
-            getenv('MONGO', 'mongo'),
-            int(getenv('MONGO_PORT', '27017'))
+            getenv('MONGO_URL', 'mongo')
         )
         db.admin.command('ismaster')
     except Exception as e:

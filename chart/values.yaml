@@ -79,8 +79,7 @@ tolerations: []
 affinity: {}
 
 mongo:
-  host: mongo
-  port: 27017
+  url: mongo
 rabbitmq:
   username: guest
   password: guest
